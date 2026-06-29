@@ -23,7 +23,26 @@
 
 ---
 
-## 🚀 Chạy nhanh (local)
+## ⚡ Khởi chạy nhanh (Global CLI)
+
+Bạn có thể cài đặt trực tiếp và khởi chạy ứng dụng như một lệnh hệ thống từ bất kỳ thư mục nào trên máy tính của bạn:
+
+### 1. Cài đặt toàn cục từ GitHub
+```bash
+npm install -g joshungpv/story-vocabulary-learner
+```
+
+### 2. Khởi chạy ứng dụng
+```bash
+story-vocabulary-learner
+```
+🎉 Ứng dụng sẽ tự động khởi động server và mở trình duyệt tại **http://localhost:3000**.
+
+*(Để cập nhật phiên bản mới nhất, bạn chỉ cần chạy lại lệnh cài đặt trên)*
+
+---
+
+## 🚀 Phát triển dự án (Local Development)
 
 ### Yêu cầu
 

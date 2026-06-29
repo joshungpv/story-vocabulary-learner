@@ -3,6 +3,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
+import { exec } from 'child_process';
 
 dotenv.config();
 
@@ -701,6 +702,20 @@ app.use((err: any, req: any, res: any, next: any) => {
   }
 });
 
+function openBrowser(url: string) {
+  const start = process.platform === 'darwin'
+    ? 'open'
+    : process.platform === 'win32'
+      ? 'start'
+      : 'xdg-open';
+
+  if (process.platform === 'win32') {
+    exec(`cmd.exe /c start ${url}`);
+  } else {
+    exec(`${start} ${url}`);
+  }
+}
+
 // Configure Vite or Serve static files
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
@@ -710,16 +725,21 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = path.join(process.cwd(), 'dist');
+    const distPath = __dirname;
     app.use(express.static(distPath));
-    app.get('*all', (req, res) => {
+    app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    const url = `http://localhost:${PORT}`;
+    console.log(`Server running on ${url}`);
+    if (process.env.NODE_ENV === 'production' && process.env.DISABLE_OPEN_BROWSER !== 'true') {
+      openBrowser(url);
+    }
   });
 }
 
 startServer();
+

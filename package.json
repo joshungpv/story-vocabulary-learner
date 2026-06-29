@@ -1,7 +1,17 @@
 {
-  "name": "react-example",
-  "private": true,
-  "version": "0.0.0",
+  "name": "story-vocabulary-learner",
+  "version": "1.0.0",
+  "description": "Học và ghi nhớ từ vựng tiếng Anh qua câu chuyện song ngữ tương tác",
+  "bin": {
+    "story-vocabulary-learner": "./bin/cli.cjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
