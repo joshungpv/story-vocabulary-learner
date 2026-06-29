@@ -1,0 +1,28 @@
+# =============================================================================
+# docker-compose.yml — Story Vocabulary Learner
+# =============================================================================
+# Usage:
+#   docker compose up -d        # Build & start in background
+#   docker compose down         # Stop & remove containers
+#   docker compose logs -f      # Follow logs
+# =============================================================================
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: story-vocab-learner
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      # ── Required ────────────────────────────────────────────────────────
+      # Get your key at https://makersuite.google.com/app/apikey
+      GEMINI_API_KEY: "${GEMINI_API_KEY?GEMINI_API_KEY is required — see .env.example}"
+      # Public URL where this app is reachable (used for OAuth / self-references)
+      APP_URL: "${APP_URL:-http://localhost:3000}"
+      # ── Optional overrides ──────────────────────────────────────────────
+      NODE_ENV: production
+    restart: unless-stopped
+    # Graceful shutdown: Node receives SIGTERM, Express closes cleanly
+    stop_grace_period: 10s

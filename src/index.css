@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom retro neon brutalist animations or style utilities */
+.brutalist-card {
+  background-color: white;
+  border: 4px solid #2D3436;
+  border-radius: 24px;
+  box-shadow: 8px 8px 0px #2D3436;
+}
+
+.brutalist-card-sm {
+  background-color: white;
+  border: 3px solid #2D3436;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0px #2D3436;
+}
+
+.brutalist-btn-coral {
+  background-color: #FF7675;
+  color: white;
+  border: 3px solid #2D3436;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #2D3436;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutalist-btn-coral:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2D3436;
+}
+
+.brutalist-btn-coral:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2D3436;
+}
+
+.brutalist-btn-mint {
+  background-color: #55E6C1;
+  color: #2D3436;
+  border: 3px solid #2D3436;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #2D3436;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutalist-btn-mint:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2D3436;
+}
+
+.brutalist-btn-mint:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2D3436;
+}
+
+.brutalist-btn-yellow {
+  background-color: #FFEAA7;
+  color: #2D3436;
+  border: 3px solid #2D3436;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #2D3436;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutalist-btn-yellow:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2D3436;
+}
+
+.brutalist-btn-yellow:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2D3436;
+}
+
+.brutalist-btn-slate {
+  background-color: #2D3436;
+  color: white;
+  border: 3px solid #2D3436;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #2D3436;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+.brutalist-btn-slate:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2D3436;
+}
+
+.brutalist-btn-slate:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2D3436;
+}
