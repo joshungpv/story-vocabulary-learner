@@ -1,6 +1,6 @@
 {
   "name": "story-vocabulary-learner",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Học và ghi nhớ từ vựng tiếng Anh qua câu chuyện song ngữ tương tác",
   "bin": {
     "story-vocabulary-learner": "./bin/cli.cjs"
